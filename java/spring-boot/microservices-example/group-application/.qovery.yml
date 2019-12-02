@@ -1,0 +1,13 @@
+application:
+  name: billing-application
+  project: microservices-example
+  private-port: 8080
+  public-port: 80
+
+routers:
+  - name: billing-router
+    routes:
+      - application-name: billing-application
+        paths:
+          - \/users\/.*\/invoices\/.*
+          - \/users\/.*\/invoices
