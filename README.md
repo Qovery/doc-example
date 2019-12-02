@@ -1,2 +1,2 @@
-# doc-example
+# doc-examples
 Example used in the Doc
