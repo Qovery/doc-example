@@ -1,5 +1,5 @@
 application:
-  name: group-application
+  name: user-application
   project: microservices-example
   private-port: 8080
   public-port: 80
@@ -7,7 +7,8 @@ application:
 routers:
   - name: main-router
     routes:
-      - application-name: group-application
+      - application-name: user-application
         paths:
-          - \/users\/.*\/groups\/.*
-          - \/users\/.*\/groups
+          - \/users\/.*
+          - \/users
+          - .*

@@ -22,7 +22,7 @@ FROM adoptopenjdk/openjdk8:alpine-slim
 EXPOSE 8080
 
 # Get the build artifact (can be a folder)
-COPY --from=build /app/build/libs/simple-example-1.0.jar /app.jar
+COPY --from=build /app/build/libs/user-application-1.0.jar /app.jar
 
 # Set specific environment variables
 ENV JAVA_OPTS=""

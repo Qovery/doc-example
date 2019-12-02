@@ -1,13 +1,13 @@
 application:
-  name: billing-application
+  name: group-application
   project: microservices-example
   private-port: 8080
   public-port: 80
 
 routers:
-  - name: billing-router
+  - name: main-router
     routes:
-      - application-name: billing-application
+      - application-name: group-application
         paths:
-          - \/users\/.*\/invoices\/.*
-          - \/users\/.*\/invoices
+          - \/users\/.*\/groups\/.*
+          - \/users\/.*\/groups

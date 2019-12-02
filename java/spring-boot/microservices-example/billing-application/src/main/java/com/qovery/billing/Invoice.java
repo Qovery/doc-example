@@ -3,43 +3,42 @@ package com.qovery.billing;
 /**
  * Created by evoxmusic on 02/12/2019.
  */
-public class User {
+public class Invoice {
 
-    private String firstName;
-    private String lastName;
-    private Integer age;
+    private Float amount;
+    private String currency;
+    private String item;
 
-    public User(String firstName, String lastName, Integer age) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
+    public Invoice() {
     }
 
-    public User() {
+    public Invoice(Float amount, String currency, String item) {
+        this.amount = amount;
+        this.currency = currency;
+        this.item = item;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public Float getAmount() {
+        return amount;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setAmount(Float amount) {
+        this.amount = amount;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getCurrency() {
+        return currency;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getItem() {
+        return item;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setItem(String item) {
+        this.item = item;
     }
-
 }

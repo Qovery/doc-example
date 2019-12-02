@@ -1,6 +1,7 @@
 package com.qovery.billing;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,14 +13,13 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/users")
-public class UserController {
+public class InvoiceController {
 
-    @GetMapping
-    public List<User> listAll() {
+    @GetMapping(path = "{userId}/invoices")
+    public List<Invoice> listAll(@PathVariable String userId) {
         return Arrays.asList(
-                new User("Alice", "Smith", 31),
-                new User("John", "Dom", 24),
-                new User("Jack", "Bauer", 54)
+                new Invoice(99.99f, "USD", "Hard Disk"),
+                new Invoice(499f, "USD", "LCD screen")
         );
     }
 
